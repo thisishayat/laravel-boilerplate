@@ -5,15 +5,18 @@
 - api_token migration field also add
 - command run to run project
 ```
+
 composer update
 php artisan migrate
+```
+
+
+
+- auth API ajax code
 
 ```
 
-![Alt text](/postman.png?raw=true "Permission change to write read")
 
-- auth API ajax request
-```
 var settings = {
   "async": true,
   "crossDomain": true,
@@ -29,6 +32,6 @@ var settings = {
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
-
 ```
 
+![Alt text](/postman.png?raw=true "Permission change to write read")
