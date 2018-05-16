@@ -4,8 +4,8 @@
 - postman screen shot added
 - api_token migration field also add
 - command run to run project
-```
 
+```
 composer update
 php artisan migrate
 ```
@@ -15,8 +15,6 @@ php artisan migrate
 - auth API ajax code
 
 ```
-
-
 var settings = {
   "async": true,
   "crossDomain": true,
