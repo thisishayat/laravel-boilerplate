@@ -12,7 +12,7 @@ php artisan migrate
 
 
 
-- auth API ajax code
+##### auth API ajax code
 
 ```
 var settings = {
