@@ -15,7 +15,30 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','api_token'
+        'username',
+        'name',
+        'sur_name',
+        'date_of_birth',
+        'place_of_birth',
+        'identity_card_no',
+        'type_of_identity',
+        'comp_name',
+        'vat_id',
+        'address',
+        'city',
+        'region',
+        'post_code',
+        'country_id',
+        'otp',
+        'otp_code',
+        'otp_expire',
+        'role',
+        'acnt_sts',
+        'is_active',
+        'email',
+        'password',
+        'pin',
+        'api_token'
     ];
 
     /**
@@ -24,6 +47,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','pin'
     ];
 }

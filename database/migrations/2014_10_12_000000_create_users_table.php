@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('type_of_identity')->nullable();
             $table->string('email')->nullable();
             $table->string('api_token', 60)->unique();
+            $table->string('pin',10);
 
             $table->string('comp_name');
             $table->string('vat_id');
@@ -32,6 +33,9 @@ class CreateUsersTable extends Migration
             $table->string('city');
             $table->string('region');
             $table->string('post_code');
+
+            $table->string('comp_file_path')->nullable();
+            $table->string('user_file_path')->nullable();
 
             $table->unsignedInteger('country_id');
             $table->string('otp')->nullable();

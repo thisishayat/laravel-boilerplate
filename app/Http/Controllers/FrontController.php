@@ -12,6 +12,6 @@ namespace App\Http\Controllers;
 class FrontController
 {
     public function test(){
-        dd('sdas');
+        dd(csrf_token());
     }
 }
