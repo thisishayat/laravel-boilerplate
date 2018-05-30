@@ -137,22 +137,28 @@ class WebRepository
             $remember = isset($input['remember']) ? $input['remember'] : false;
 
             if (Auth::attempt($credentials, $remember)) {
-                dump(Auth::check());
-                dump(Auth::user());
-                return ['status' => 2000, 'msg' => 'Login Successful'];
+                $res = [
+                    'status'=>trans('custom.status.success'),
+                    'msg'=>trans('custom.msg.dataGet'),
+                    'data' => Auth::user()->toArray(),
+                ];
             } else {
-                return ['status' => 5000, 'error' => 'Invalid Credentials'];
+                $res = [
+                    'status'=>trans('custom.status.failed'),
+                    'msg'=>trans('custom.msg.invalid'),
+                ];
             }
         } catch (Exception $e) {
-            return ['status' => 5000, 'error' => $e->getMessage()];
+            $res = [
+                'status'=>trans('custom.status.failed'),
+                'msg'=>trans('custom.msg.invalid'),
+                'error' => $e->getCode()
+            ];
         }
+        return $res;
 
     }
 
-    public function getCheck($request){
-        dump($request->all());
-        dd(Auth::check());
-    }
 
 
 }

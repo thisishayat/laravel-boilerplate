@@ -24,10 +24,5 @@ class WebController
         $retData = $repo->logIn($request);
         return response()->json($retData);
     }
-    public function getCheck($en,Request $request){
-        $repo = new WebRepository();
-        $retData = $repo->getCheck($request);
-        return response()->json($retData);
-    }
 
 }
