@@ -1,14 +1,36 @@
+## Token install
 
-## backend installation
+- branch name is 'master'
+- postman screen shot added
+- api_token migration field also add
 
-#####Following steps need to follow to run this project:
+##### command run to run project
 
-- Download every repository from Git
-- Switch to every git folder that download from git
-- branch name "master"
-- then run following command on current directory
-- need to create new db for admin and set db name to env
-- "composer update"
-- "php artisan migrate"
-- "php artisan db:seed"
+```
+composer update
+php artisan migrate
+```
 
+
+
+##### auth API ajax code
+
+```
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://localhost:8000/api/user",
+  "method": "GET",
+  "headers": {
+    "authorization": "Bearer c2bca4367022daf236293e1e98964a60",
+    "cache-control": "no-cache",
+    "postman-token": "907b4be9-77a5-01c0-49fa-1e629da387d4"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+```
+
+![Alt text](/postman.png?raw=true "Permission change to write read")
