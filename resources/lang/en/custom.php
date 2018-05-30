@@ -5,7 +5,7 @@ return [
     'status'=>[
         'success' => '200',
         'failed' => '500',
-        'noData' => '300',
+        'noData' => '404',
         'validError' => '400',
         'dbInsertError' => '499',
     ],
